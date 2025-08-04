@@ -1,0 +1,327 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  background-color: #0099ff;
+  color: white;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  animation: FadeIn 2.5s ease 1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 容器負責排列按鈕 */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 3vh;
+  padding: 0 16px;
+}
+
+/* 單顆按鈕樣式（可以自由改） */
+.button-container button {
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button-container button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 響應式：在小螢幕上縮小按鈕與 gap */
+@media (max-width: 600px) {
+  .button-container {
+    gap: 12px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+p {
+  text-align: center;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.roblox {
+  color: black;
+}
+
+.roblox a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  padding: 4px 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.roblox a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: skyblue;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.roblox a:hover::after {
+  width: 100%;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.highlight {
+  background: linear-gradient(270deg, skyblue, blue, darkblue, blue, skyblue);
+  background-size: 600% 600%; /* 放大背景方便移動 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientMove 5s ease infinite;
+}
+
+.highlight2 {
+  background: linear-gradient(
+    270deg,
+    #00ffff,
+    #40e0d0,
+    #48d1cc,
+    #00ced1,
+    #20b2aa
+  );
+  background-size: 600% 600%; /* 放大背景方便移動 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientMove 5s ease infinite;
+}
+
+.anno {
+  padding: 1em;
+  background: #f9f9f9;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+#announcements div {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#announcements strong {
+  color: #007bff;
+}
+
+#announcements small {
+  color: gray;
+}
+
+#announcements img {
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.role-tag {
+  background-color: #7a4191;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.img1 {
+  margin: 5vh;
+  width: 58.25vh;
+}
+
+.ZLStation {
+  font-size: 25px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 15px;
+}
+
+/* 讓 .text 區塊更像卡片 */
+.text-box {
+  background-color: #f5f5f5;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: auto;
+  color: black; /* 這裡補充，讓整個區塊文字都是黑色 */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text {
+  color: black !important;
+}
+
+.image-text-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* 改這裡 */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.footer {
+  background-color: #003366; /* 台鐵藍 */
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 14px;
+  border-top: 4px solid #ffd700; /* 黃色邊框像警戒線 */
+  border-bottom: 4px solid #ffd700; /* 黃色邊框像警戒線 */
+  margin-top: 6vh;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  width: 220px;
+  height: 400px;
+  padding: 60px 40px;
+  background-color: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 5vh;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 220px;          /* 所有圖片統一寬度 */
+  height: 220px;         /* 所有圖片統一高度 */
+  object-fit: cover;     /* 裁切圖片但不變形 */
+  border-radius: 16px;
+  margin-bottom: auto;   /* 把圖片推到最上方 */
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.creator-title {
+  font-size: 1.5rem;
+  margin: 8px 0 4px;
+}
+
+.description {
+  font-size: 1.25rem;
+}
+
+.owner {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.co-owner {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.del {
+  text-decoration: line-through;
+  font-size: x-small;
+}
+
+.title-a,
+.title-ab,
+.title-ac {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  text-align: center;
+  color: #222;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.about-link,
+.links {
+  color: #007bff;
+}
